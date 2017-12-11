@@ -2,11 +2,9 @@
 
 ## Getting Started
 
-Download Helm https://github.com/kubernetes/helm/releases
-
-Untar the archive
-
-Move it to /usr/local/bin/helm
+1. Download Helm https://github.com/kubernetes/helm/releases 
+2. Untar the archive
+3. Move it to /usr/local/bin/helm
 
 ### Install Heapster
 
@@ -26,8 +24,12 @@ helm install stable/kubernetes-dashboard
 ./grafana.sh
 ```
 
-## Delete Stack
+## Delete Monitoring Stack
 
 ```
 helm del --purge monitoring
 ```
+
+## Creating Alerts
+
+![Creating an Alert](create_alert.gif)
