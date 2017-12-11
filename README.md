@@ -25,3 +25,9 @@ helm install stable/kubernetes-dashboard
 ```
 ./grafana.sh
 ```
+
+## Delete Stack
+
+```
+helm del --purge monitoring
+```

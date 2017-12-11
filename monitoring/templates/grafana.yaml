@@ -23,10 +23,9 @@ spec:
           readOnly: true
         - mountPath: /var
           name: grafana-storage
-#        - mountPath: /etc/grafana/grafana.ini
-#          subPath: grafana.ini
-#          name: grafana-config
-#          readOnly: true
+        - mountPath: /etc/grafana/grafana.ini
+          subPath: grafana.ini
+          name: grafana-config
         env:
         - name: INFLUXDB_HOST
           value: monitoring-influxdb
@@ -52,9 +51,9 @@ spec:
           path: /etc/ssl/certs
       - name: grafana-storage
         emptyDir: {}
-#      - name: grafana-config
-#        configMap:
-#          name: grafana-config
+      - name: grafana-config
+        configMap:
+          name: grafana-config
 ---
 apiVersion: v1
 kind: Service
